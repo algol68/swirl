@@ -1,17 +1,22 @@
 swagger: "2.0"
 info:
-  title: Sample API
-  description: API description in Markdown.
+  title: Swirl
+  description: swirl sample
   version: 1.0.0
 host: api.example.com
 basePath: /v1
 schemes:
   - https
 paths:
-  /users:
+  /gk-ccb/account/:
     get:
-      summary: Returns a list of users.
-      description: Optional extended description in Markdown.
+      summary: get account data
+      parameters:
+        - in: path
+          name: acctId
+          required: true
+          type: integer
+          minimum: 1
       produces:
         - application/json
       responses:
